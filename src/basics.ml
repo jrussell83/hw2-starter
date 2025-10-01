@@ -44,6 +44,7 @@ let rec fac n =
 
 let rec get_nth ((idx:int), (lst: 'a list)) = 
   match lst with
+  | [] -> failwith "Index out of bounds"
   | i :: v -> if idx = 0 then i else get_nth (idx - 1, v)
 
 let larger lst1 lst2 = 
@@ -59,5 +60,6 @@ let sum lst1 lst2 =
     | [] -> 0
     | h :: t -> h + total t
   in total lst1 + total lst2
+
 
 
