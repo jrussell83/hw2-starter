@@ -1,4 +1,5 @@
-(test
+(tests
   (names public)
   (libraries basics oUnit))
+
 
