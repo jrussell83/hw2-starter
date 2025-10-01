@@ -20,10 +20,10 @@ let is_older (date1: int * int * int) (date2: int * int * int) =
   let (y1, m1, d1) = date1 in
   let (y2, m2, d2) = date2 in
   if y1 < y2 then true 
-  else if y1 > y2 then false
+  else if y1 > y2 then false 
   else if m1 < m2 then true
   else if m1 > m2 then false
-
+  else d1 < d2
 
 let to_us_format (date1: int * int * int) = 
   let (y, m, d) = date1 in (m, d, y)
@@ -59,4 +59,5 @@ let sum lst1 lst2 =
     | [] -> 0
     | h :: t -> h + total t
   in total lst1 + total lst2
+
 
