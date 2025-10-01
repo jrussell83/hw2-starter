@@ -1,7 +1,8 @@
-(test
+(tests
   (names student)
   (libraries basics oUnit))
 (env
   (dev
     (flags (:standard -w -33))))
+
 
