@@ -14,14 +14,15 @@ let rev_triple (tup : 'a * 'b * 'c) =
   let (a,b,c) = tup in (c,b,a)
 
 let is_odd x = 
-  if x mod 2 = 0 then true else false
+  if x mod 2 = 0 then false else true
 
 let is_older (date1: int * int * int) (date2: int * int * int) = 
   let (y1, m1, d1) = date1 in
   let (y2, m2, d2) = date2 in
   if y1 < y2 then true 
-  else if m1 < m2 then true 
-  else if d1 < d2 then true else false
+  else if y1 > y2 then false
+  else if m1 < m2 then true
+  else if m1 > m2 then false
 
 
 let to_us_format (date1: int * int * int) = 
@@ -58,3 +59,4 @@ let sum lst1 lst2 =
     | [] -> 0
     | h :: t -> h + total t
   in total lst1 + total lst2
+
